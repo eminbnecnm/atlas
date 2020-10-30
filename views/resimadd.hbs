@@ -1,0 +1,26 @@
+<center>
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-success shadow h-100 py-2">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">    
+            <img src="https://cdn4.iconfinder.com/data/icons/files-and-folders-thinline-icons-set/144/File_Upload-512.png"  style="border: 5px ridge #65F9A6;" class="rounded-circle"  width="200" height="200" class="d-inline-block align-top rounded-circle"> 
+            <br>
+            <form method="POST" enctype="multipart/form-data">
+              <div class="field">
+                <div class="control">
+                  <input type="text"  name="resim_isim" id="resim_isim" class="form-control" placeholder="İsim"  aria-describedby="basic-addon1" required>
+                </div>
+              </div>
+              <br>
+              <input type="file" name="dosya" class="form-control" required/>
+              <br>
+              <br>
+              <button type="submit" class="btn btn-success">Yükle<i aria-hidden='true'></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>

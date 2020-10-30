@@ -1,0 +1,62 @@
+[
+    {
+        "kodlar": {
+            "Ekonomi Bot": {
+                "isim": "Ekonomi Bot",
+                "paylasankisi": "Nairobi",
+                "id": "rW9o1FO4cSjhWslaezit",
+                "aciklama": "Çok kaliteli ekonomi bot",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/712441813952364565/a_7722772eb80a5f2a35b86a61cfe182b3.png",
+                "main_kodu": "",
+                "komutlar_kodu": "https://glitch.com/~atlas-ekonomi",
+                "kod_rank": "inviteraltyapi",
+                "tarih": "06 Ekim 2020 Salı 20:20:14"
+            },
+            "Boş Altyapı": {
+                "isim": "Boş Altyapı",
+                "paylasankisi": "Nairobi",
+                "id": "8o0C3bfqN3jfONpmHDjT",
+                "aciklama": "Kaliteli Boş Altyapı.",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/712441813952364565/a_7722772eb80a5f2a35b86a61cfe182b3.png",
+                "main_kodu": "",
+                "komutlar_kodu": "https://glitch.com/~atlas-bosaltyapi",
+                "kod_rank": "inviteraltyapi",
+                "tarih": "06 Ekim 2020 Salı 20:25:19"
+            },
+            "React Bot": {
+                "isim": "React Bot",
+                "paylasankisi": "Nairobi",
+                "id": "zH0goBn5MxmrYc50RdNA",
+                "aciklama": "Emoji React Botu. (Emojiye basınca rol verme.)",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/712441813952364565/a_7722772eb80a5f2a35b86a61cfe182b3.png",
+                "main_kodu": "",
+                "komutlar_kodu": "https://glitch.com/~atlas-reactbot",
+                "kod_rank": "inviteraltyapi",
+                "tarih": "06 Ekim 2020 Salı 20:36:10"
+            },
+            "7/24 Müzik Botu": {
+                "isim": "7/24 Müzik Botu",
+                "paylasankisi": "Nairobi",
+                "id": "4ozY0DaRnVf1TMa1esS2",
+                "aciklama": "Eklediğiniz linkleri 7/24 Aralıksız tekrarlar.",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/712441813952364565/a_7722772eb80a5f2a35b86a61cfe182b3.png",
+                "main_kodu": "",
+                "komutlar_kodu": "https://glitch.com/~atlas-7-24",
+                "kod_rank": "inviteraltyapi",
+                "tarih": "06 Ekim 2020 Salı 20:44:45"
+            }
+        }
+    }
+]

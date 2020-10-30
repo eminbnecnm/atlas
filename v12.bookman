@@ -1,0 +1,160 @@
+[
+    {
+        "kodlar": {
+            "Alkış": {
+                "isim": "Alkış",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "80OmA8qVEtXyLqIJVdmd",
+                "aciklama": "Joker Gifi Atar Alkışlama Felan ",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n//ATLAS DEVELOPMENT\r\n  name: 'alkış',\r\n  aliases: 'alkış',\r\n  category: 'eğlence',\r\n  \r\n   run: (client, message, args) => {\r\n     const Discord = require('discord.js');\r\n     const embed = new Discord.MessageEmbed()\r\n   .setAuthor(message.author.username + ' Alkışlandın Kardeşimm!')\r\n      .setColor(\"RANDOM\")\r\n  .setImage(\"https://thumbs.gfycat.com/WarpedAdmiredCormorant-size_restricted.gif\")\r\n  \r\n      message.channel.send(embed);\r\n        }\r\n  }",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 20:40:16"
+            },
+            "Atasözü": {
+                "isim": "Atasözü",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "c8EzOEUX6hPexMev9Qbg",
+                "aciklama": "Ayarladığınız Atasözlerini Atar.",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n  \r\n  name: 'atasözü',\r\n  aliases: 'atasözü',\r\n  category: 'eğlence',\r\n  //ATLAS DEVELOPMENT\r\n   run: (client, message, args) => {\r\n     const Discord = require('discord.js');\r\n     \r\n     var Random = [\r\n'**Acele ile menzil alınmaz.**',\r\n'**Acı söz insanı dininden çıkarır, tatlı söz yılanı deliğinden çıkarır.**',\r\n'**Akıllı sır saklar; aptal sır verir.**', '**Baba oğluna bir bağ bağışlamış, oğul babaya bir salkım üzüm vermemiş.**',\r\n'**Bağ dua değil, çapa dua ister.**',\r\n'**Yanlız Taş Duvar Olmaz.**',\r\n'**Kambersiz Düğün Olmaz.**',\r\n'**Ağlarsa Anam Ağlar Gerisi Yalan Ağlar.**',\r\n'**Sirkesini Sarımsağını Sayan Paçayı Yiyemez.**',\r\n'**Her Taş Baş Yarmaz.**',\r\n'**Ağaçtan Maşa Aptaldan Paşa Olmaz.**',\r\n'**Doğru Sarsılır Ama Yıkılmaz.**',\r\n'**Dil Kılıçtan Keskindir.**',    \r\n'**Atlar Nallanırken Kurbağalar Ayak Uzatmaz.**',\r\n'**Leyleği kuştan mı sayarsın, yazın gelir, kışın gider.**',\r\n];\r\nvar atlas = Math.floor(Math.random()*Random.length);     \r\n     const embed = new Discord.MessageEmbed()\r\n.setDescription(`${Random[atlas]}`)\r\n.setColor(\"AQUA\")\r\n      message.channel.send(embed);\r\n        }\r\n  }",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 20:42:22"
+            },
+            "Balık-tut": {
+                "isim": "Balık-tut",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "xJU300RdrBMsqyV3h1K8",
+                "aciklama": "Balık Tutma Eğlence",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n//ATLAS DEVELOPMENT\r\n  name: 'balık-tut',\r\n  aliases: 'balık-tut',\r\n  category: 'eğlence',\r\n  \r\n   run: (client, message, args) => {\r\n     const Discord = require('discord.js');  \r\n    message.channel.send('Balık Tuttun Balığı Çekiyorsun..').then(message => {\r\n   var atlasdevelopment = ['``Sazan Tuttun! +10TL`` :fish:' ,'``Köpek Balığı Tuttun İyi Para Eder Sat Sat +1000TL`` :D' ,'``Uskumru Tuttun! +20TL`` :fish:' ,'``Mezgit Tuttun! Havyarıda Var Hee +30TL`` :) :fish:' ,'``Japon Balığı Tuttun Yemeyi Düşünmüyorsun Herhalde? +5TL``' ,'``Hamsi Tuttun! +35TL`` :fish:' ,'``Levrek Tuttun! +40TL`` :fish:' ,'``Hiçbirşey Tutamadın Maalesef! ZAAA`` :wastebasket:' ,'``Alabalık Tuttun! Oh Enfes`` :fish:' ,'``Maalesef Balık Oltadan Kaçtı! Ağlıcakmısın?`` :wastebasket:' ,'``İstavrit Tuttun!`` :fish:'];\r\n      var atlasdevelopment = atlasdevelopment[Math.floor(Math.random() * atlasdevelopment.length)];\r\n            message.edit(`${atlasdevelopment}`);\r\n       });\r\n        }\r\n  }",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 20:45:52"
+            },
+            "banner": {
+                "isim": "banner",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "WLZK2o4q2RO02cTtKj7X",
+                "aciklama": "banner logo yapar ",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n//ATLAS DEVELOPMENT  \r\n  name: 'banner',\r\n  aliases: 'banner',\r\n  category: 'eğlence',\r\n\r\n   run: (client, message, args) => {\r\n   const Discord = require('discord.js');\r\n   let txt = args.join('+');\r\n   if(!args[0]) return message.channel.send(\"Lütfen yazı yazın!\");\r\n   const atlasdevelopment = new Discord.MessageEmbed()\r\n  .setColor(\"AQUA\")\r\n  .setAuthor(\"Al Sana Banner!\")\r\n  .setImage(\"https://dummyimage.com/2000x500/33363c/ffffff&text=\" + txt)\r\n  .setFooter(\"ATLAS DEVELOPMENT\");\r\n      message.channel.send(atlasdevelopment);\r\n        }\r\n  }\r\n//ATLAS DEVELOPMENT",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 20:48:38"
+            },
+            "espri": {
+                "isim": "espri",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "GsS10RWYvZ4FrgIsXk2o",
+                "aciklama": "espri yapar | Turkj Mizaj ",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n//atlas development \r\n  name: 'espri',\r\n  aliases: 'espri',\r\n  category: 'eğlence',\r\n  \r\n   run: (client, message, args) => {\r\n     const Discord = require('discord.js');\r\n\r\n     var Random = [\r\n      \"Seni görünce; \\ngözlerim dolar , \\nkulaklarım euro.\",\r\n      \"Kar üzerinde yürüyen adama ne denir. Karabasan.\",\r\n      \"Yıkanan Ton’a ne denir? Washington!\",\r\n      \"Gidenin arkasına bakmayın yoksa geleni göremezsiniz.\",\r\n      \"+Oğlum canlılara örnek ver. \\n-Kedi, köpek. \\n+Cansızlara örnek ver. \\n-Ölü kedi, ölü köpek.\",\r\n      \"+Kanka ben banyoya 3 kişi giriyom. \\n-Oha nasıl? \\n+Hacı, Şakir ve ben. \\n-Defol lan!\",\r\n      \"+Kocanızla ortak özelliğiniz ne? \\n-Aynı gün evlendik.\",\r\n      \"+Evladım ödevini neden yapmadın? \\n-Bilgisayarım uyku modundaydı, uyandırmaya kıyamadım.\",\r\n      \"+Bizim arkadaş ortamında paranın lafı bile olmaz. \\n-Niye ki? \\n+Çünkü hiç birimizin parası yok.\",\r\n      \"Annemin bahsettiği elalem diye bir örgüt var illuminatiden daha tehlikeli yemin ederim.\",\r\n      \"+Acıkan var mı ya? \\n-Yok bizde tatlı kan var.\",\r\n      \"Yılanlardan korkma, yılmayanlardan kork.\",\r\n      \"+Baykuşlar vedalaşırken ne der? \\n-Bay bay baykuş.\",\r\n      \"Beni Ayda bir sinemaya götürme, Marsta bir sinemaya götür.\",\r\n      \"Aaa siz çok terlemişsiniz durun size terlik getireyim.\",\r\n      \"Aklımı kaçırdım, 100.000 TL fidye istiyorum.\",\r\n      \"Rock yapmayan kişiye ne denir? -Yaprock\",\r\n      \"Ben Yedigün içiyorum sen Onbeşgün iç. :D\",\r\n      \"Sinemada on dakika ara dedi, aradım aradım açmadı.\",\r\n      \"Yeni yapılmış resimlere ne denir? -Nevresim\",\r\n      \"Tebrikler kazandınız, şimdi tencere oldunuz!\",\r\n      \"İshal olmuş böceğe ne denir? -Cırcır Böceği\",\r\n      \"keklik askere giderse nolur? -Erkeklik\",\r\n      \"Bizim CD sürücümüz ehliyeti nerden almış acaba ?!\",\r\n      \"Yılanlardan korkma, yılmayanlardan kork.\",\r\n      \"Kırmızı giyen erkeğe ne denir? -Albay\",\r\n      \"Ben kahve içiyorum, Nurgül Yeşilçay.\",\r\n      \"Bak şu karışıdaki uçak PİSTİ , ama bir türlü temizlemediler.\",\r\n      \"Top ağlarda, ben ağlamaz mıyım ?\",\r\n      \"Burger King, bende vezir\",//DAHA FAZLA EKLEYEBİLİRSİNİZ ATLAS\r\n];    \r\n var atlasdevelopment = Math.floor(Math.random()*Random.length);     \r\n     const emin = new Discord.MessageEmbed()\r\n.setDescription(`${Random[atlasdevelopment]}`)\r\n.setColor(\"AQUA\")\r\n      message.channel.send(emin);\r\n        }\r\n  }\r\n//atlas development \r\n  ",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 20:50:47"
+            },
+            "FBİ": {
+                "isim": "FBİ",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "u3kZY7zqMqzN7nAcM5cN",
+                "aciklama": "FBİ Komutu Vov!",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n//atlas development  \r\n  name: 'fbi',\r\n  aliases: 'fbi',\r\n  category: 'eğlence',\r\n  \r\n   run: (client, message, args) => {\r\n     const Discord = require('discord.js');\r\n      let mesaj = args.slice(0).join(' ');\r\n     const emin = new Discord.MessageEmbed()\r\n    .setColor(\"RANDOM\")\r\n    .setDescription(\"atlas development\")\r\n    .setImage(`https://media.tenor.com/images/1ec1659fd1cdaaf72a9a5fa566f842d6/tenor.gif`)\r\n     message.channel.send(emin)\r\n             }\r\n  }",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 20:55:14"
+            },
+            "İlginç Bilgi": {
+                "isim": "İlginç Bilgi",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "T5UukKNLsE3emaJVrKcX",
+                "aciklama": "İlginç Bilgiler Atar",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n//ATLAS DEVELOPMENT  \r\n  name: 'ilginç-bilgi',\r\n  aliases: 'ilginç-bilgi',\r\n  category: 'eğlence',\r\n  \r\n   run: (client, message, guild) => {\r\n     const Discord = require('discord.js');\r\n     var Random = [\r\n        \"Kaju olarak bildiğimiz çerez aslında kaju meyvesinin sapıdır.\",\r\n        \"Ananas aslında meyve değildir ve tarlada bu şekilde büyür.\",\r\n        \"Su aygırının sütü pembe renklidir.\",\r\n      \"bozayı ya da kahverengi ayılar, bir at kadar hızlı koşabilip, bir su canlısı kadar iyi yüzebilirler.\",\r\n       \"Hem etinden hem de sütünden faydalandığımız inekler, arkadaşlığa fazlasıyla önem verir ve dostlarından ayrıldıklarında stres yaşarlar.\",\r\n       \"Hani çoğu hayvan yeni doğduğunda dünyaya karşı savunmasız olur ya! İşte kobra yılanları onlardan değil! Zira yumurtadan çıktıktan yalnızca 2-3 saat sonra ölümcül zehre sahip oluyorlar.\",\r\n       \"Her yıl 2500 solağın, sağ elini kullananlar için yapılmış aletleri (elektrikli testere gibi) kullanırken öldüğünü biliyor muydunuz?\",\r\n       \"Çoğu kişi ananasın bir meyve olduğunu düşünse de ananas tarlada yetişir ve meyve değildir\",\r\n        \"Mavi balinaların kalbi o kadar büyüktür ki bir insan atardamarları içerisinde rahatlıkla yüzebilir.\",\r\n        \"Kuzey Kore ile Finlandiya'yı ayıran tek ülke Rusya'dır.\",\r\n        \"'Duck Hunt' aslında iki kişilik bir oyundur.İkinci oyuncu ördeği kontrol eder.\",\r\n        \"Plüton keşfedildiği tarihten itibaren bir kez bile güneşin etrafında tam tur dönmemiştir. Bu yüzden artık bir gezegen olarak kabul edilmiyor.\",\r\n        \"Bal güneş görmediği sürece asla bozulmaz.\",\r\n        \"Mario blokları eliyle kırar, kafasıyla değil\",\r\n       \"Paraguay’da kan bağışı yapan kişiler, düello yapabiliyor. Ve karşı taraf öldüğü takdirde, hayatta kalana hiçbir ceza verilmiyor.\",\r\n        \"19. yüzyıldaki tüm insanlar, şuan 2 dakikada çekilen fotoğraflar kadar fotoğraf çekememişti.\",\r\n        \"Yer fıstığı aslında bir baklagildir ve toprağın altında büyür.\",\r\n        \"Her 5000 bebekten birisi anüsü olmadan (imperforate anus) doğuyor ve hastane ortamında anüs yapılması gerekiyor.\",\r\n        \"Gökyüzündeki yıldız sayısı dünya üzerindeki tüm plajlardaki kum tanesi sayısından fazladır.\",\r\n        \"Bin saniye yaklaşık 16 dakika, bir milyon saniye yaklaşık 11 gün, bir milyar saniye yaklaşık 32 yıl ve bir trilyon saniye yaklaşık 32.000 yıl eder.\",\r\n        \"İnsan DNA'sı %50 oranında muz DNA'sı ile aynıdır.\",\r\n        \"İlk 'Star Wars' Filmi yayınlandığında (25 Mayıs 1977) Fransa'da hala giyotin ile idam yasaldı. Giyotin, kelle vurdurtmaya benzer bişeydir.\",\r\n        \"Rusya, Pluto'dan daha büyük bir yüzölçümüne sahiptir.\",\r\n        \"Ahtapotların üç tane kalbi vardır.\",\r\n        \"Fareler ve atlar kusamaz.\",\r\n        \"Yasalara göre; Belçika'da her ilkokul öğrencisinin mızıka dersi alması zorunludur.\",\r\n        \"Şayet soğan doğrarken sakız çiğnerseniz; evet, ağlamazsınız.\",\r\n        \"İnsanoğlunun vücudundaki en güçlü kas, çene kasıdır.\",\r\n        \"Bir okyanusun en derin yerinde, demir bir topun dibe çökmesi bir saatten uzun sürer.\",\r\n        \"Bugüne kadar ölçülmüş en büyük buz dağı, 200 mil uzunluğunda ve 60 mil genişliğindedir ve Belçika'dan daha büyük bir yüzölçümüne sahiptir.\",\r\n        \"İnsanın gözü tam olarak 576 megapikseldir.\",\r\n        \"Işık saniyede 300.000 km yol alıyor.\",\r\n        \"Su samurları el ele tutuşarak uyuyorlar.\",\r\n       \"Dünyanın en uzun süren trafik sıkışıklığı 12 gün sürdü, 100 km kuyruk oluştu ve araçlar günde 1 kilometre ilerleyebildiler\",\r\n      \"Taklitçi ahtapot isimli ahtapot, sadece renk değiştirmekle kalmıyor, aynı zamanda dil balığı, aslan balığı ve deniz yılanı gibi hayvanların şekline de bürünebiliyor.\",\r\n        \"Everest’te 200’ün üzerinde ceset bulunuyor ve bu cesetler dağcılar tarafından varış noktaları olarak kullanılıyor.\"\r\n];\r\nvar ATLASDEVELOPMENT = Math.floor(Math.random()*Random.length);     \r\n     const emin = new Discord.MessageEmbed()\r\n.setDescription(`${Random[ATLASDEVELOPMENT]}`)\r\n.setColor(\"AQUA\")\r\n      message.channel.send(emin);\r\n        }\r\n  }",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 20:56:50"
+            },
+            "Polis": {
+                "isim": "Polis",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "at1cxvwbA9evyYvSuzc0",
+                "aciklama": "Polis Gifi Atar",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n//ATLAS DEVELOPMENT  \r\n  name: 'polis',\r\n  aliases: 'polis',\r\n  category: 'eğlence',\r\n  \r\n   run: (client, message, args) => {\r\n     const Discord = require('discord.js');\r\n     const atlas = new Discord.MessageEmbed()\r\n    .setAuthor(message.author.username + ' Polis Geliyor!!')\r\n    .setColor('RANDOM')\r\n    .setTimestamp()\r\n    .setImage(`https://www.hareketligifler.net/data/media/1449/polis-arabasi-hareketli-resim-0012.gif`)\r\n      message.channel.send(atlas);\r\n        }\r\n  }\r\n//ATLAS DEVELOPMENT  ",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 20:58:17"
+            },
+            "Sayısalcı": {
+                "isim": "Sayısalcı",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "P8s5y9JnJrlCXjXRUMXd",
+                "aciklama": "Sayısalcı Kodu Sunucudan Rastgele Birini Çeker ",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n//ATLAS DEVELOPMENT\r\n  name: 'sayısalcı',\r\n  aliases: 'sayısalcı',\r\n  category: 'eğlence',\r\n  \r\n   run: (client, message, args) => {\r\n     const Discord = require('discord.js');\r\n     const emin = new Discord.MessageEmbed()\r\n     \r\n    .setColor('RANDOM')\r\n    .setTitle('Sunucunun Sayısalcısı')\r\n    .setDescription(message.guild.members.cache.random().displayName)\r\n    .setThumbnail(\"https://yt3.ggpht.com/a/AATXAJz-VlX-Pu6Fnc0gaRBxf3dJ2SuM1heMl0dfx_NESg=s900-c-k-c0xffffffff-no-rj-mo\")\r\n    .setFooter('ATLAS MORUQ')\r\n    .setTimestamp()\r\n     message.channel.send(emin);\r\n        }\r\n  }\r\n//ATLAS DEVELOPMENT",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 20:59:58"
+            },
+            "Tarih": {
+                "isim": "Tarih",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "P2rFPZ8EfNVVRBpUtdNM",
+                "aciklama": "Tarihi Atar",
+                "modüller": [
+                    "\"useful-tools\""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n//ATLAS DEVELOPMENT  \r\n  name: 'tarih',\r\n  aliases: 'tarih',\r\n  category: 'eğlence',\r\n  \r\n   run: (client, message, args) => {\r\n     const Discord = require('discord.js');\r\n     const useful = require('useful-tools')\r\n     if(message.author.bot || message.channel.type === \"dm\") return;\r\n  const tarih = new Date()\r\n \r\n    const EMİN = new Discord.MessageEmbed()\r\n  .setAuthor(message.author.username, message.author.avatarURL)\r\n  .addField(\"Tarih\", useful.tarih(tarih, 'G.A.Y'), true)\r\n  .setThumbnail(\"http://www.orjinalsaat.org/wp-content/uploads/2015/10/cropped-icon.png\")\r\n  .setFooter(\"ATLAS DEVELOPMENT\", client.user.avatarURL)\r\n    message.channel.send(EMİN);\r\n        }\r\n  }\r\n//ATLAS DEVELOPMENT",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 21:03:06"
+            },
+            "Yazı-Tura": {
+                "isim": "Yazı-Tura",
+                "paylasankisi": "⍣ EminBneCnm",
+                "id": "3MCVOdAGdcfGTAEZoruk",
+                "aciklama": "Yazı tura atarsınız",
+                "modüller": [
+                    ""
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/356849332395180032/a_ef1484c75b3d36c559fe648603c217fd.png",
+                "main_kodu": "",
+                "komutlar_kodu": "module.exports = {\r\n//atlas development\r\n  name: 'yazı-tura',\r\n  aliases: 'yazı-tura',\r\n  category: 'eğlence',\r\n  \r\n   run: (client, message, args) => {\r\n     \r\n  const Discord = require('discord.js');  \r\n    message.channel.send('Havaya Attım Parayı Bakalım Ne Çıkacak? İnş Baş Çıkmaz').then(message => {\r\n   var atlasdevelopment = ['``Tura Döndü Şansını`` ' ,'``Yazı Çıktı``' ,'``Dik Durdu Lan`` ','``Para Kayboldu? Nası Ya`` '];\r\n      var atlasdevelopment = atlasdevelopment[Math.floor(Math.random() * atlasdevelopment.length)];\r\n            message.edit(`${atlasdevelopment}`);\r\n       });\r\n        }\r\n  }\r\n//atlas development\r\n  ",
+                "kod_rank": "v12",
+                "tarih": "09 Ekim 2020 Cuma 21:08:18"
+            }
+        }
+    }
+]

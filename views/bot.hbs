@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.js"></script>
+<center>
+<br><br>
+<img src="{{kod.avatar}}" alt="avatar" style="border-width: 1rem; border: solid white;border-radius: 50%; width: 150px;">
+  <p style="color: white;">
+    <font size="8">{{kod.isim}}</font>
+      </p>
+  <p>
+   <a href="/profil/{{kod.sahipid}}"><button class="btn btn-secondary"><img src="{{kod.sahipavatar}}"  alt="avatar" style="border-width: 1rem; border: solid ;border-radius: 50%; max-width: 100%; height: 2.5rem;border-color:black; "> {{kod.sahipisim}}</button></a>
+
+  </p>
+<button class="btn btn-warning website">Prefix: {{kod.botprefix}}</button>
+  
+  
+{{#if kod.website}}
+<a href="{{kod.website}}"><button class="btn btn-warning website">Web Sitesi</button></a>
+{{/if}}
+  
+{{#if kod.desteksunucusu}}
+<a href="{{kod.desteksunucusu}}"><button class="btn btn-warning website">Destek Sunucusu</button></a>
+{{/if}}
+  <br><br>
+  <a href="https://discord.com/oauth2/authorize?client_id={{kod.botid}}&scope=bot&permissions=0" target="_Blink"><button class="btn btn-warning website">0 Perm Davet Et</button></a>
+  <a href="https://discord.com/oauth2/authorize?client_id={{kod.botid}}&scope=bot&permissions=8" target="_Blink"><button class="btn btn-warning website">8 Perm Davet Et</button></a>
+  </center>
+  <p>
+    
+  
+&nbsp;&nbsp;<font size="5" color="white">• Açıklama</font>
+<pre ><code class="language-javascript line-numbers" data-src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.js" data-start="-5" >{{kod.uzunaciklama}} </code> </pre>
+</p>

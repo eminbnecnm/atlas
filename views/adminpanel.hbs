@@ -1,0 +1,122 @@
+<body onkeydown="return false">
+<a class="btn btn-default" style="background-color:#c9658f; color:black; width:100%;" data-toggle="collapse">FreeCode</a>
+<div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+  {{#each freecode}}
+  <div class="col mb-1">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem; max-height: 20rem;">
+  <div class="card-header"><img src="{{this.resim}}" alt="avatar" style="border-width: 1rem; border: solid;border-radius: 50%; max-width: 100%; height: 2.5rem;"> <b>{{this.paylasankisi}}</b></div>
+  <div class="card-body">
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Kod Adı:</b> <kbd>{{this.isim}}</kbd></p>
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Paylaşılma Tarihi:</b> <kbd>{{this.tarih}}</kbd></p><br>
+  <a href="/{{this.kod_rank}}/{{this.id}}" class="btn btn-success"><i class="mdi mdi-chart-line" style="height: 18rem;"></i>İncele</a>
+  <a href="/sil/{{this.kod_rank}}/{{this.id}}" class="btn btn-danger" style="margin: 1rem; ">Sil</a>
+  <a href="/düzenle/{{this.kod_rank}}/{{this.id}}" class="btn btn-warning">Düzenle</a>
+  </div>
+  </div>
+</div>
+{{/each}}
+</div>
+
+
+<body onkeydown="return false">
+<a class="btn btn-default" style="background-color:#c9658f; color:black; width:100%;" data-toggle="collapse">V12</a>
+<div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+  {{#each v12}}
+  <div class="col mb-1">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem; max-height: 20rem;">
+  <div class="card-header"><img src="{{this.resim}}" alt="avatar" style="border-width: 1rem; border: solid;border-radius: 50%; max-width: 100%; height: 2.5rem;"> <b>{{this.paylasankisi}}</b></div>
+  <div class="card-body">
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Kod Adı:</b> <kbd>{{this.isim}}</kbd></p>
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Paylaşılma Tarihi:</b> <kbd>{{this.tarih}}</kbd></p><br>
+  <a href="/{{this.kod_rank}}/{{this.id}}" class="btn btn-success"><i class="mdi mdi-chart-line" style="height: 18rem;"></i>İncele</a>
+  <a href="/sil/{{this.kod_rank}}/{{this.id}}" class="btn btn-danger" style="margin: 1rem; ">Sil</a>
+  <a href="/düzenle/{{this.kod_rank}}/{{this.id}}" class="btn btn-warning">Düzenle</a>
+  </div>
+  </div>
+</div>
+{{/each}}
+</div>
+
+
+
+<a class="btn btn-default" style="background-color:#d6893a; color:black; width:100%;" data-toggle="collapse">Inviter |</a>
+<div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+  {{#each inviter1}}
+  <div class="col mb-1">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem; max-height: 20rem;">
+  <div class="card-header"><img src="{{this.resim}}" alt="avatar" style="border-width: 1rem; border: solid;border-radius: 50%; max-width: 100%; height: 2.5rem;"> <b>{{this.paylasankisi}}</b></div>
+  <div class="card-body">
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Kod Adı:</b> <kbd>{{this.isim}}</kbd></p>
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Paylaşılma Tarihi:</b> <kbd>{{this.tarih}}</kbd></p>
+  <a href="/{{this.kod_rank}}/{{this.id}}" class="btn btn-success"><i class="mdi mdi-chart-line" style="height: 18rem;"></i>İncele</a>
+  <a href="/sil/{{this.kod_rank}}/{{this.id}}" class="btn btn-danger" style="margin: 1rem; ">Sil</a>
+  <a href="/düzenle/{{this.kod_rank}}/{{this.id}}" class="btn btn-warning">Düzenle</a>
+  </div>
+  </div>
+</div>
+{{/each}}
+</div>
+
+
+
+
+
+<a class="btn btn-default" style="background-color:#ffcc00; color:black; width:100%;" data-toggle="collapse">Inviter ||</a>
+<div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+  {{#each inviter2}}
+  <div class="col mb-1">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem; max-height: 20rem;">
+  <div class="card-header"><img src="{{this.resim}}" alt="avatar" style="border-width: 1rem; border: solid;border-radius: 50%; max-width: 100%; height: 2.5rem;"> <b>{{this.paylasankisi}}</b></div>
+  <div class="card-body">
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Kod Adı:</b> <kbd>{{this.isim}}</kbd></p>
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Paylaşılma Tarihi:</b> <kbd>{{this.tarih}}</kbd></p>
+  <a href="/{{this.kod_rank}}/{{this.id}}" class="btn btn-success"><i class="mdi mdi-chart-line" style="height: 18rem;"></i>İncele</a>
+  <a href="/sil/{{this.kod_rank}}/{{this.id}}" class="btn btn-danger" style="margin: 1rem; ">Sil</a>
+  <a href="/düzenle/{{this.kod_rank}}/{{this.id}}" class="btn btn-warning">Düzenle</a>
+  </div>
+  </div>
+</div>
+{{/each}}
+</div>
+
+
+
+
+<a class="btn btn-default" style="background-color:#00e6e6; color:black; width:100%;" data-toggle="collapse">Inviter |||</a>
+<div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+  {{#each inviter3}}
+  <div class="col mb-1">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem; max-height: 20rem;">
+  <div class="card-header"><img src="{{this.resim}}" alt="avatar" style="border-width: 1rem; border: solid;border-radius: 50%; max-width: 100%; height: 2.5rem;"> <b>{{this.paylasankisi}}</b></div>
+  <div class="card-body">
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Kod Adı:</b> <kbd>{{this.isim}}</kbd></p>|
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Paylaşılma Tarihi:</b> <kbd>{{this.tarih}}</kbd></p>
+  <a href="/{{this.kod_rank}}/{{this.id}}" class="btn btn-success"><i class="mdi mdi-chart-line" style="height: 18rem;"></i>İncele</a>
+  <a href="/sil/{{this.kod_rank}}/{{this.id}}" class="btn btn-danger" style="margin: 1rem; ">Sil</a>
+  <a href="/düzenle/{{this.kod_rank}}/{{this.id}}" class="btn btn-warning">Düzenle</a>
+  </div>
+  </div>
+</div>
+{{/each}}
+</div>
+
+
+
+
+<a class="btn btn-default" style="background-color:#ff4d4d; color:black; width:100%;" data-toggle="collapse">Inviter Altyapı</a>
+<div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+  {{#each inviteraltyapi}}
+  <div class="col mb-1">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem; max-height: 20rem;">
+  <div class="card-header"><img src="{{this.resim}}" alt="avatar" style="border-width: 1rem; border: solid;border-radius: 50%; max-width: 100%; height: 2.5rem;"> <b>{{this.paylasankisi}}</b></div>
+  <div class="card-body">
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Kod Adı:</b> <kbd>{{this.isim}}</kbd></p>
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Paylaşılma Tarihi:</b> <kbd>{{this.tarih}}</kbd></p>
+  <a href="/{{this.kod_rank}}/{{this.id}}" class="btn btn-success"><i class="mdi mdi-chart-line" style="height: 18rem;"></i>İncele</a>
+  <a href="/sil/{{this.kod_rank}}/{{this.id}}" class="btn btn-danger" style="margin: 1rem; ">Sil</a>
+  <a href="/düzenle/{{this.kod_rank}}/{{this.id}}" class="btn btn-warning">Düzenle</a>
+  </div>
+  </div>
+</div>
+{{/each}}
+</div>

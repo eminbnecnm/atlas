@@ -1,0 +1,35 @@
+<div class="container">
+<h1 class="text-center"style="color:white;" >Atlas Development</h1>  
+<h2 class="text-center"style="color:white;">Kod Paylaşım</h2>
+<h3 class ="text-center" style="color:white;" >Lütfen Kodların Çalıştığından Emin Ol.</p></h3>
+<hr>
+<link rel="stylesheet" href="kodpaylasmayeri.css">
+<form action="kodpaylasimform" method='POST'>
+     <div class="input-group">
+      <input type="text" class="form-control" name="kod_ismi" id="kod_ismi" placeholder="Kodun Adı" required>
+       <div class="input-group-append">
+  <select class="custom-select text-white bg-danger" name="kod_kategoriler" id="kod_kategoriler" required>
+          <option value="freecode" style="background-color:black;">Kategori: Free Code</option>
+          <option value="v12" style="background-color:black;">Kategori: V12</option>
+          <option value="inviter1" style="background-color:black;">Kategori: Inviter I</option>
+          <option value="inviter2" style="background-color:black; color:;">Kategori: Inviter II</option>
+          <option value="inviter3" style="background-color:black; color:">Kategori: Inviter III</option>
+          <option value="inviteraltyapi" style="background-color:black;">Kategori: Inviter Altyapı</option>
+    
+        </select>  
+       </div>
+  </div><br>
+          
+      <input type="text" class="form-control" name="aciklama" id="kod_aciklama" placeholder="Kodun Açıklaması" required><br>
+      <input type="text" class="form-control" name="modüller" id="kod_modüller" placeholder="Gerekli Modüller (',' ile ayırın)"><br>
+           <p class="h3" style="color:white;">
+        Komutlar Klasörüne Atılacak Dosya Buraya:
+      </p>
+      <textarea class="form-control"  name="komutlar_code" id="kod_komut" rows="10" placeholder="Komutlar Klasörüne Atılacak Dosya Buraya (Altyapı link gireceksen buraya gir.)"></textarea><br>
+      <p class="h3" style="color:white;">
+        Kodun Main Dosyası Buraya:
+      </p>
+      <textarea class="form-control" name="main_code" id="kod_main" rows="10" placeholder="Kodunuzun Main Dosyasını Buraya Girin"></textarea>
+      <button type="submit" class="btn btn-danger btn-lg btn-block" style="text-alight:center;">Gönder</button>
+
+</form>

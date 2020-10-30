@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Atlas Development</title>
+    <meta charset="utf-8" />
+
+    <link rel="icon" href="https://cdn.glitch.com/2fa50cc2-d769-4f6a-b766-9555b4fc2c39%2Fatlas.png?v=1601212338136" type="image/x-icon" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/body.css">
+    <link rel="stylesheet" href="/resimadd.css">
+    <script src="resimadd.js"></script>
+<body>
+  
+  
+
+  </head>
+    <nav class="navbar navbar-expand-lg navbar-dark" ic=lor"maaaaaaav" style="background-color:	black; opacity: 0.7;">
+      <a class="navbar-brand"  href="/">
+        <img src="https://cdn.glitch.com/2fa50cc2-d769-4f6a-b766-9555b4fc2c39%2Fatlas.png?v=1601212338136" style="border-radius:50%" width="30" height="30" alt="">
+        Atlas
+      </a>
+      <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="color: white;"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-laptop-code"></i> Kodlar
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item font-weight-bold" href="/freecode" style="color: #c9658f;"><i class="fas fa-code"></i> FreeCode</a>
+              <a class="dropdown-item font-weight-bold" href="/v12" style="color: #d90441;"><i class="fas fa-code"></i> V12</a>
+              <a class="dropdown-item font-weight-bold" href="/inviter1" style="color: #d6893a;"><i class="fas fa-code"></i> Inviter |</a>
+              <a class="dropdown-item font-weight-bold" href="/inviter2" style="color: #ffcc00;"><i class="fas fa-code"></i> Inviter ||</a>
+              <a class="dropdown-item font-weight-bold" href="/inviter3" style= "color: #00e6e6;"><i class="fas fa-code"></i> Inviter |||</a>
+              <a class="dropdown-item font-weight-bold" href="/inviteraltyapi" style="color: #ff4d4d"><i class="fas fa-code"></i> Inviter Altyapı</a>
+
+          </li>
+            
+
+            <!--BOTLİST-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="color: white;"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-robot"></i> Botlist</a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item font-weight-bold" href="/botadd" style="color: white;"><i class="fas fa-thumbtack"></i> Bot Ekle</a>
+              <a class="dropdown-item font-weight-bold" href="/botlar" style="color: white;"><i class="fas fa-thumbtack"></i> Botlar</a>
+          </li>
+            
+           <!--Uptime-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="color: white;"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-upload"></i> Uptime Robot</a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item font-weight-bold" href="/uptimeadd" style="color: white;"><i class="fas fa-thumbtack"></i> Uptime ekle</a>  
+            <a class="dropdown-item font-weight-bold" href="/uptimepanel" style="color: white;"><i class="fas fa-thumbtack"></i> Uptime Panel</a>
+          </li>
+            
+                       <!--KOD İLGİLİ-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="color: white;"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <i class="fas fa-exclamation-triangle"></i> Kod ilgili</a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item font-weight-bold" href="/istekkod" style="color: white;"><i class="fas fa-thumbtack"></i> İstek Kod</a>
+            <a class="dropdown-item font-weight-bold" href="/hatabildir" style="color: white;"><i class="fas fa-thumbtack"></i> Hatalı Kod</a> 
+          </li>
+        
+          
+
+
+ 
+
+          
+
+          
+        </ul>
+        {{#if kullanıcı}}
+        
+          <div class="dropdown">
+            <a class="btn btn-light nav-link text-uppercase " style="background-color:#E0E0E0;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="https://cdn.discordapp.com/avatars/{{kullanıcı.id}}/{{kullanıcı.avatar}}.png"  alt="avatar" style="border-width: 1rem; border: solid ;border-radius: 50%; max-width: 100%; height: 2.5rem;border-color:black; ">  {{kullanıcı.username}}  <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color:black;color:white;">
+
+              <a class="dropdown-item" href="/adminpanel" style="color:white; background-color:black;"><i class="fas fa-users-cog"></i> Kod Panel!</a>              
+              <a class="dropdown-item" href="/botpanel" style="color:white; background-color:black;"><i class="fas fa-robot"></i> Bot Panel!</a>
+  
+              <a class="dropdown-item" href="/paylas" style="color:white; background-color:black;"><i class="fas fa-file-code"></i> Kod Paylaş!</a>
+             
+              <div class="dropdown-divider" style="border-color:white; "></div>
+              
+              <a class="dropdown-item" href="/profil/{{kullanıcı.id}}" style="color:white; background-color:black;"><i class="far fa-id-card"></i> Profiline Bak!</a>
+              
+              <div class="dropdown-divider"style="border-color:white;" ></div>
+              <a class="dropdown-item"  href="/cikis" style="color:white; background-color:black;"><i class="fas fa-sign-out-alt"></i> Çıkış Yap!</a>
+           
+            </div>
+          </div>
+
+            
+        {{else}}
+        <a class="btn btn-outline-light" href="/giris"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a>
+        
+        {{/if}}
+      </div>
+      
+    </nav>
+    {{{body}}}
+    <div id="top">
+    <a style="display:scroll;position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top"><img src="https://cdn.glitch.com/14543598-7999-4748-b670-82fb99f538a3%2Fyc1.png?v=1602053893747" /></a>
+
+    </div>
+              
+
+             
+
+      
+
+<script type="text/javascript">
+function IE(e) {
+     if (navigator.appName == "Microsoft Internet Explorer" && (event.button == "2" || event.button == "3")) {
+          alert('UYARI BEYBI');
+          return false;
+     }
+}
+function NS(e) {
+     if (document.layers || (document.getElementById && !document.all)) {
+          if (e.which == "2" || e.which == "3") {
+               alert('Sitemizde sağ tık engelleme vardır lütfen basma.');
+               return false;
+          }
+     }
+}
+document.onmousedown=IE;document.onmouseup=NS;document.oncontextmenu=new Function("return false");
+</script>    
+  
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  </body>
+</html>

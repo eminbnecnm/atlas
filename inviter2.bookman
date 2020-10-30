@@ -1,0 +1,98 @@
+[
+    {
+        "kodlar": {
+            "Rol Koruma": {
+                "isim": "Rol Koruma",
+                "paylasankisi": "Sleax & K",
+                "id": "BOhZUJEcUPoYkXLv7h1v",
+                "aciklama": "Rol silindiğinde aynı şekilde tekrardan oluşturur.",
+                "modüller": [
+                    "discord.js",
+                    " quick.db"
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/692367941160927312/a_3867174522e9159d14b55e9f8aaa9a0e.png",
+                "main_kodu": "client.on(\"roleDelete\", async role => {\r\nlet rol_koruma = await db.fetch(`rolk.${role.guild.id}`);\r\nlet cezalırol = (\"CEZALI ROL ID\");\r\nlet log = (\"LOG KANAL ID\")\r\n\r\nif (rol_koruma == \"aktif\") {\r\n\r\nconst entry = await role.guild.fetchAuditLogs({type: 'ROLE_DELETE'}).then(audit => audit.entries.first());\r\n\r\nrole.guild.createRole({ name: role.name, color: role.color, hoist: role.hoist, position: role.position, permissions: role.permissions, mentionable: role.mentionable });\r\n    \r\n  let üye = role.guild.member(entry.executor);\r\n  await üye.roles.forEach(x =>\r\n  üye.removeRole(x).then(f => üye.addRole(cezalırol)));\r\n  \r\n  client.channels.get(log).send(new Discord.RichEmbed()\r\n  .setTitle(`Rol Koruma Sistemi`)\r\n  .setColor(\"RED\")\r\n  .setDescription(`Bir rol silindi tekrardan oluşturuldu yapan kişinin bütün yetkilerini aldım ve cezalı rolünü verdim! \\n\\nSilinen Rol: \\`${role.name}\\` \\nRolü Silen Kullanıcı: ${entry.executor}`)) \r\n}\r\n})",
+                "komutlar_kodu": "const Discord = require(\"discord.js\");\r\nconst db = require(\"quick.db\");\r\nconst ayarlar = require(\"../ayarlar.json\");\r\n\r\nexports.run = async (atlas, message, args) => {\r\nlet prefix = ayarlar.prefix;\r\n\r\n  if (message.author.id !== message.guild.owner.id)\r\n    return message.channel.send(\r\n      new Discord.RichEmbed()\r\n      .setAuthor(message.author.tag, message.author.avatarURL)\r\n      .setDescription(\"Bu Komutu Sadece `SUNUCU SAHİBİ` kullanabilir!\")\r\n      .setColor(\"RED\"));\r\n\r\n  if (!args[0])\r\n    message.channel.send(\r\n      new Discord.RichEmbed()\r\n        .setAuthor(message.author.tag, message.author.avatarURL)\r\n        .setDescription(`Açmak İçin: **${prefix}rol-koruma aç** Kapatmak İçin: **${prefix}rol-koruma kapat**`));\r\n\r\n  let rol = await db.fetch(`rolk.${message.guild.id}`);\r\n  if (args[0] == \"aç\") {\r\n    if (rol) {\r\n      const embed = new Discord.RichEmbed()\r\n      .setColor(\"RED\")\r\n      .setAuthor(message.author.tag, message.author.avatarURL)\r\n      .setDescription(\"Rol Koruma Sistemi Zaten Aktif!\")\r\n      message.channel.send(embed);\r\n      return;\r\n} else {\r\n      db.set(`rolk.${message.guild.id}`, \"aktif\");\r\n      const embed = new Discord.RichEmbed()\r\n      .setColor(\"GREEN\")\r\n      .setAuthor(message.author.tag, message.author.avatarURL)\r\n      .setDescription(\"Rol Koruma Sistemi Başarıyla Aktif Edildi!\")\r\n      message.channel.send(embed);\r\n    }\r\n  } else if (args[0] == \"kapat\") {\r\n    db.delete(`rolk.${message.guild.id}`);\r\n    const embed = new Discord.RichEmbed()\r\n    .setColor(\"RED\")\r\n    .setAuthor(message.author.tag, message.author.avatarURL)\r\n    .setDescription(\"Rol Koruma Sistemi Başarıyla Kapatıldı!\")\r\n    message.channel.send(embed);\r\n};\r\n}\r\n\r\nexports.conf = {\r\n  enabled: true,\r\n  aliases: [],\r\n  permLevel: 0\r\n};\r\n\r\nexports.help = {\r\n  name: \"rol-koruma\"\r\n};",
+                "kod_rank": "inviter1",
+                "tarih": "06 Ekim 2020 Salı 15:52:25"
+            },
+            "Admin Sistemi": {
+                "isim": "Admin Sistemi",
+                "paylasankisi": "Nairobi",
+                "id": "CwijXVrlxXD85k9T2ttl",
+                "aciklama": "Botunuza admin ekleyebilir komutları onların kullanımına özel yapabilirsiniz.",
+                "modüller": [
+                    "discord.js",
+                    "quick.db"
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/712441813952364565/a_7722772eb80a5f2a35b86a61cfe182b3.png",
+                "main_kodu": "",
+                "komutlar_kodu": "const Discord = require('discord.js')\r\nconst db = require(\"quick.db\")\r\nexports.run = async(client, message, args) => {\r\n\r\nlet ownerid = \"BOT SAHİBİ ID\"\r\n//if (db.has(`admin_${message.author.id}`) === false) return\r\n\r\n//-------------------------------------------------------------------------------------\r\n  \r\n\r\nif(args[0] == 'ekle') {\r\nlet owner = [ownerid];\r\nif (owner.includes(message.author.id)) {\r\nlet user = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);\r\nif (!user) return message.reply(\"**Dostum Etiket Atmayı Unuttun**\");\r\ndb.set(`admin_${user.id}`, \"Admin\")\r\nmessage.channel.send(`${user} Admin Olarak Kaydedildi!`)}}\r\n  \r\n  \r\n  \r\n  \r\nif(args[0] == 'kaldır') {\r\nlet owner = [ownerid];\r\nif (owner.includes(message.author.id)) {\r\nlet user = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);\r\nif (!user) return message.reply(\"**Dostum Etiket Atmayı Unuttun**\");\r\ndb.delete(`admin_${user.id}`, \"Admin\")\r\nmessage.channel.send(`${user} Adminlikten Silindi!`)}}  \r\n  \r\n  \r\nif(args[0] == 'sorgula') {\r\nvar user = message.mentions.users.first() || message.author;\r\nlet yarrak = db.fetch(`admin_${user.id}`)\r\nlet u = message.mentions.users.first() || message.author;\r\nif(u.bot === true) {message.channel.send(new Discord.RichEmbed()\r\n.setDescription(\"Botlar Admin Olamaz!\")\r\n.setColor(\"ff0000\"))}  \r\nelse {\r\nvar ks = [];  \r\nif(yarrak == null) ks = `❌ \\`Değil!\\``\r\nif(yarrak != null) ks = `✅ \\`${yarrak}\\``\r\nmessage.channel.send(new Discord.RichEmbed()\r\n.setColor(\"ff0000\")\r\n.setAuthor(`${user.username}`, user.avatarURL)\r\n.setThumbnail(user.avatarURL)                     \r\n.setTitle(`Admin Sorgulama Bilgisi:`)                 \r\n.addField(`**Kullanıcı:**`, `<@${user.id}>`, true)\r\n.addField(\"**Kullanıcı Admin mi?**\", ks)\r\n.setFooter(`${client.user.username} Admin Sistemi!`)   \r\n.setTimestamp())}    }\r\n    \r\n\r\n}\r\nexports.conf = {\r\n  enabled: true, \r\n  guildOnly: false,\r\n  aliases: [],\r\n  permLevel: 0\r\n};\r\n\r\nexports.help = {\r\n  name: 'admin'\r\n};",
+                "kod_rank": "inviter2",
+                "tarih": "06 Ekim 2020 Salı 18:38:54"
+            },
+            "Aynı Mesajı Yazma Engelleme": {
+                "isim": "Aynı Mesajı Yazma Engelleme",
+                "paylasankisi": "Nairobi",
+                "id": "nfVRdUQiHjfSwTeP0kUj",
+                "aciklama": "Üyenin aynı mesajı art arda göndermesini engeller.",
+                "modüller": [
+                    "quick.db"
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/712441813952364565/a_7722772eb80a5f2a35b86a61cfe182b3.png",
+                "main_kodu": "const db = require(\"quick.db\")\r\nclient.on(\"message\", async(message) => {\r\n  if(message.author.bot) return;\r\n  if((message.channel.type == \"text\") && !db.has(`messages.${message.guild.id}.${message.author.id}`)) {\r\n    db.set(`messages.${message.guild.id}.${message.author.id}`, {date: (Date.now() + (600000)), message: message.content});\r\n  } else if((message.channel.type == \"text\") && (db.get(`messages.${message.guild.id}.${message.author.id}`).date > Date.now())) {\r\n    if(db.get(`messages.${message.guild.id}.${message.author.id}`).message == message.content) {\r\n      message.reply(`Lütfen Aynı Mesajı Kullanma.`);\r\n      message.channel.bulkDelete(2)\r\n    }\r\n  } else if(message.channel.type == \"text\") {\r\n    db.delete(`messages.${message.guild.id}.${message.author.id}`);\r\n  }\r\n})",
+                "komutlar_kodu": "",
+                "kod_rank": "inviter2",
+                "tarih": "06 Ekim 2020 Salı 18:39:53"
+            },
+            "Geçici Oda": {
+                "isim": "Geçici Oda",
+                "paylasankisi": "Nairobi",
+                "id": "vea7OGayxuRGRMYx0w8v",
+                "aciklama": "Geçici oda sistemidir. Odaya tıklandığı zaman tıklayan kişiye özel oda oluşturur.",
+                "modüller": [
+                    "discord.js",
+                    "quick.db"
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/712441813952364565/a_7722772eb80a5f2a35b86a61cfe182b3.png",
+                "main_kodu": "client.on('voiceStateUpdate', async(oldMember, newMember) => {\r\nif (!db.fetch(`gK_${newMember.guild.id}`))\r\nif (!db.fetch(`gKa_${newMember.guild.id}`)) return;\r\nlet Old = oldMember;\r\nlet newUserChannel = newMember.voiceChannel\r\nlet oldUserChannel = oldMember.voiceChannel\r\nif(newMember.user.bot) return;\r\nif(oldMember.user.bot) return;\r\nlet limit = db.fetch(`glimit_${newMember.guild.id}`)\r\nif (newMember.voiceChannelID == db.fetch(`gK_${newMember.guild.id}`)) {\r\nnewMember.guild.createChannel(newMember.user.username, \"voice\").then(async(ü) => {\r\nü.setParent(db.fetch(`gKa_${newMember.guild.id}`))\r\nü.guild.channels.get(ü.id).setUserLimit(limit || 1)\r\nnewMember.setVoiceChannel(ü.id)      \r\ndb.set(`gK_${newMember.id}`, ü.id)})}\r\nif (oldUserChannel) {\r\nOld.guild.channels.forEach(channels => {\r\nif (channels.id == db.fetch(`gK_${oldMember.guild.id}`)) return;\r\nif(channels.parentID == db.fetch(`gKa_${oldMember.guild.id}`)) {\r\nif(channels.id == db.fetch(`gK_${oldMember.id}`)) {\r\nsetTimeout(() => {\r\nif (!oldMember.voiceChannel.id == db.fetch(`gK_${oldMember.id}`)) return;\r\nif(oldMember.voiceChannel.members.size == 0) {\r\ndb.delete(`gK_${oldMember.id}`)\r\nreturn channels.delete()\r\n}}, 5000)}}})}\r\n});\r\n",
+                "komutlar_kodu": "const Discord = require('discord.js')\r\nconst db = require('quick.db');\r\nconst a = {prefix: \"!\"}\r\nvar kanalismi = \"By Nairobi\" //GİRİNCE KATEGORİNİN İSMİNİ GİRİN\r\nvar kategoriismi = \"Tıkla!\" //AÇILACAK KATEGORİNİN İSMİNİ GİRİN!\r\n\r\nexports.run = async (client, message, args) => {\r\nif (message.author.id !== message.guild.owner.id) return message.channel.send(\"Bu Komutu Sadece Sunucu Sahibi Kullanabilir!\");\r\nif(args[0] == \"limit\") {\r\nif(args[1] === \"sıfırla\") {\r\ndb.delete(`glimit_${message.guild.id}`)\r\nmessage.channel.send(new Discord.RichEmbed()\r\n.setColor(\"RED\")\r\n.setDescription(\"Ses Limit Sıfırlandı! Varsayılan Değer: `1`\"))\r\n}\r\nif(args[1] === \"ayarla\") {\r\nlet sayı = args[2]\r\nif(!sayı) return message.channel.send(new Discord.RichEmbed()\r\n.setColor(\"RED\")\r\n.setDescription(\"Lütfen Bir Sayı Belirle!\"))\r\nif(sayı > 5) return message.channel.send(new Discord.RichEmbed()\r\n.setColor(\"RED\")\r\n.setDescription(\"Maximum Limit `5`'tir!'\"))\r\nif(isNaN(sayı)) return message.channel.send(new Discord.RichEmbed()\r\n.setColor(\"RED\")\r\n.setDescription(\"Sadece Sayı Girebilirsin!\"))\r\ndb.set(`glimit_${message.guild.id}`, sayı)\r\nmessage.channel.send(new Discord.RichEmbed()\r\n.setColor(\"RED\")\r\n.setDescription(\"Başarıyla Açılacak Kanalların Limiti \"+sayı+\" Olarak Ayarlandı!\"))\r\n}\r\n}\r\n\r\nif(args[0] == \"sıfırla\") {\r\nif(db.fetch(`gKa_${message.guild.id}`) == null) return message.channel.send(\"Zaten Ayarlı Değil!\")\r\nmessage.guild.channels.find(x =>(x .name).includes(kategoriismi)).delete()\r\nmessage.guild.channels.find(x =>(x .name).includes(kanalismi)).delete()\r\ndb.delete(`gKa_${message.guild.id}`)\r\ndb.delete(`gK_${message.guild.id}`)\r\nmessage.channel.send(new Discord.RichEmbed()\r\n.setColor(\"RED\")\r\n.setDescription(\"Ayarlanmış Geçici Oda Sistemi Sıfırlandı! Ve Kanallar Silindi!\"))\r\n}\r\n\r\nif(args[0] == \"ayarla\") {\r\nif(db.fetch(`gKa_${message.guild.id}`)) return message.channel.send(\"Sistem Zaten Açık!\")\r\nmessage.guild.createChannel(kanalismi, \"category\").then(kategori => {\r\nmessage.guild.createChannel(kategoriismi, \"voice\").then(ses => {\r\nses.setParent(kategori.id)\r\ndb.set(`gKa_${message.guild.id}`, kategori.id)\r\ndb.set(`gK_${message.guild.id}`, ses.id)\r\n})})\r\nmessage.channel.send(new Discord.RichEmbed()\r\n.setColor(\"RED\")\r\n.setDescription(\"Başarıyla Geçici Oda Sistemi Aktif Edildi!\"))}\r\nlet author = `Nairobi#1590`\r\nif(!args[0]) return message.channel.send(new Discord.RichEmbed()\r\n.setColor(\"RED\")\r\n.setTitle(\"Geçici Oda Sistemi!\")\r\n.setTimestamp()\r\n.setDescription(\"Öncelikle Selam. Bu kodun amacı sunucunuzda gereksiz ses kanalları açmadan otomatik kullanıcılara özel oda açma kapama yapan bir sistemdir!\")\r\n.addField(\"**Kullanım Örnekleri;**\", `\\`${a.prefix}go ayarla\\` => **Sistemi Açmanıza Yarar!**\r\n\\`${a.prefix}go sıfırla\\` => **Sistemi Sıfırlamanıza Yarar!**\r\n\\`${a.prefix}go limit ayarla <sayı>\\` => **Açılacak Özel Odanın Katılma Limitini Belirlersiniz!**\r\n\\`${a.prefix}go limit sıfırla\\` => **Açılacak Özel Odanın Ayarlanmış Katılma Limitini Sıfırlarsınız!** Varsayılan Sayı; \\`1\\``)\r\n.setFooter(`Yapımcı: ${author}`, client.user.avatarURL))\r\n};\r\n//ATLAS DEVELOPMENT\r\nexports.conf = {aliases: [\"go\"],}\r\nexports.help = {name: 'geçici-oda'}",
+                "kod_rank": "inviter2",
+                "tarih": "06 Ekim 2020 Salı 19:31:40"
+            },
+            "Bot İstatistik": {
+                "isim": "Bot İstatistik",
+                "paylasankisi": "Nairobi",
+                "id": "SYV0NvEPBdkmm5LLLECc",
+                "aciklama": "Botunuzun İstatistiklerini Atar.",
+                "modüller": [
+                    "discord.js",
+                    "moment",
+                    "os",
+                    "cpu-stat",
+                    "common-tag",
+                    "moment-duration-format"
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/712441813952364565/a_7722772eb80a5f2a35b86a61cfe182b3.png",
+                "main_kodu": "",
+                "komutlar_kodu": "const Discord = require('discord.js');\r\nconst moment = require('moment');\r\nconst { version } = require(\"discord.js\");\r\nconst os = require('os');\r\nlet cpuStat = require(\"cpu-stat\");\r\nconst { stripIndents } = require('common-tags');\r\nrequire('moment-duration-format');\r\nexports.run = (bot, message, args) => {\r\n    let cpuLol;\r\n    cpuStat.usagePercent(function(err, percent, seconds) {\r\n        if (err) {\r\n            return console.log(err);\r\n        }\r\n        const duration = moment.duration(bot.uptime).format(\" D [gün], H [saat], m [dakika], s [saniye]\");\r\n        const embedStats = new Discord.RichEmbed()\r\n            .setAuthor(bot.user.username + \" | İstatistikler\", bot.user.avatarURL)\r\n            .setColor(\"RANDOM\")\r\n            .addField(\"❯ Bellek Kullanımı\", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`)\r\n            .addField(\"❯ Çalışma Süresi \", `${duration}`)\r\n            .addField(\"❯ Bot İstatistikleri\", stripIndents`\r\n            \\`\\`\\`yaml\r\n            Kullanici: ${bot.users.size.toLocaleString()} \r\n            Sunucu: ${bot.guilds.size.toLocaleString()} \r\n            Kanal: ${bot.channels.size.toLocaleString()}\r\n            Ping: ${Math.round(bot.ping)}ms.\r\n            \\`\\`\\`\r\n            `)\r\n            .addField(\"❯ Versiyonlar\", stripIndents`\r\n            » Discord.js: v${version}\r\n            » Node.js: ${process.version}\r\n            `)\r\n            .addField(\"❯ CPU\", `\\`\\`\\`yaml\\n${os.cpus().map(i => `${i.model}`)[0]}\\`\\`\\``)\r\n            .addField(\"❯ CPU Kullanımı\", `%${percent.toFixed(2)}`)\r\n            .addField(\"❯ İşletim Sistemi\", `${os.platform()} | ${os.arch()} Bit`) \r\n        message.channel.send(embedStats)\r\n    });\r\n};\r\n//ATLAS DEVELOPMENT\r\nexports.conf = {aliases: []};\r\nexports.help = {name: 'istatistik'};",
+                "kod_rank": "inviter2",
+                "tarih": "06 Ekim 2020 Salı 19:45:12"
+            },
+            "Bot'u Sesli kanal'a sokma": {
+                "isim": "Bot'u Sesli kanal'a sokma",
+                "paylasankisi": "Hell Prince",
+                "id": "vLOsHOyB0BMwwZY9aIYC",
+                "aciklama": "Botu Herhnagi Bir Ses Kanalına Sokar",
+                "modüller": [
+                    "discord.js"
+                ],
+                "resim": "https://cdn.discordapp.com/avatars/734557122091810968/a_213f086313f4cefab27c5b867d5782bd.png",
+                "main_kodu": "client.on(\"ready\", () => {\r\n  client.channels.get(\"sesli kanal id'si\").join();\r\n   //main dosyaya atılacak\r\n})",
+                "komutlar_kodu": "",
+                "kod_rank": "inviter2",
+                "tarih": "06 Ekim 2020 Salı 23:04:02"
+            }
+        }
+    }
+]

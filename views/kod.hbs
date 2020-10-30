@@ -1,0 +1,34 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<h3 class="text-center text-light font-weight-bolder"><kbd>Atlas Development</kbd></h3>
+<h5 class="text-center text-light font-weight-light">Eğer kodda bir hata varsa <kbd>bildir</kbd> butonuna basarak bildirebilirsin.</h5>
+<hr>
+<h4 style="border:solid; border-radius: 30px; border-color: black">
+  <br>
+  <p style="color: white;">&nbsp;&nbsp;• Kodun İsmi: <kbd>{{kod.isim}}</kbd></p>
+  <br>
+  <p style="color: white;">&nbsp;&nbsp;• Kodun Açıklaması: <kbd>{{kod.aciklama}}</kbd></p>
+  <br>
+  <p style="color: white;">&nbsp;&nbsp;• Paylaşılma Tarihi: <kbd>{{kod.tarih}}</kbd></p>
+  <br>
+  <p style="color: white;">&nbsp;&nbsp;• Gerekli Modüller: <kbd>{{kod.modüller}}</kbd></p>
+  <br>
+  <p style="color: white;">&nbsp;&nbsp;• Paylaşan Kişi: <kbd>{{kod.paylasankisi}}</kbd></p>
+<center>
+  <a href="/hatabildir" class="btn btn-warning"><i class="mdi mdi-chart-line"></i>Bildir</a>
+</center><br>
+  
+</h4>
+<p><h3 style="color: white;">&nbsp;&nbsp;• Komutlar Kısmı;</h3></p>
+<div class="codesayfasi">
+ <pre ><code class="language-javascript line-numbers" data-src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.js" data-start="-5" >{{kod.komutlar_kodu}} </code> </pre>
+</div>
+<br><br>
+<p><h3 style="color: white;">&nbsp;&nbsp;• Main Kısmı;</h3></p>
+<div class="codesayfasi">
+ <pre ><code class="language-javascript line-numbers" data-src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.js" data-start="-5" >{{kod.main_kodu}} </code> </pre>
+</div>

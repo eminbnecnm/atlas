@@ -1,0 +1,59 @@
+<body onkeydown="return false">
+<link rel="stylesheet" href="/profilhaha.css">
+  <div class="profil-div bg-dark">
+    <a class="profil-bg profil-block"></a>
+    <div>
+      <div class="profil-button">
+        <a href="https://discordapp.com/users/{{member.user.id}}" class="btn btn-primary btn-sm">Discord Özel Mesaj Gönder!</a>  
+      </div>
+      <a href="https://discordapp.com/users/{{member.user.id}}" class="profil-avatarLink">
+        <img alt="Avatar" src="{{avatarURL}}" class="profil-avatarImg">
+      </a>
+      <div class="profil-divUser">
+        <div class="profil-divName"><h6 style="color: white;">{{member.user.username}}</h6></div>
+        <span>
+{{#if yetkiler.sahip}}
+ <span><img src="https://cdn.discordapp.com/attachments/721699754215735338/721725366103703632/719938869700853830.png" style="border-radius:50%" width="20" height="20"> <a style="color: #ff3e96">Kurucu</a></span>
+{{else}}
+ 
+{{#if yetkiler.booster}}
+ <span><img src="https://cdn.discordapp.com/attachments/721699754215735338/721731661439434772/719938680491606046.png" style="border-radius:50%" width="20" height="20"> <a style="color: #ffe413">Booster</a></span>
+{{else}} 
+
+{{#if yetkiler.yetkili}}
+ <span><img src="https://cdn.discordapp.com/attachments/721699754215735338/721725345535098941/719938172762587136.png" style="border-radius:50%" width="20" height="20"> <a style="color: #ff4500">Admin</a></span>
+{{else}}         
+          
+{{#if yetkiler.kodcu}}
+<span><img src="https://cdn.discordapp.com/attachments/721699754215735338/721725297787142144/719938039908007967.png" style="border-radius:50%" width="20" height="20"> <a style="color: #00cd00">Kod Paylaşımcı</a></span>
+{{else}}        
+<span>
+<h6 style="color: white;">Üye</h6></span>
+          {{/if}}
+          {{/if}}
+          {{/if}}
+          {{/if}}
+        </span>      
+      </div>
+      <div class="profil-divStats">
+        <h3 style="color:white;">Görebildiği Kategoriler;</h3>
+        <ul class="profil-Arrange">
+          <li class="profil-ArrangeSizeFit"><span class="profil-StatValue"><a class="btn btn-outline-warning" href="/freecode">FreeCode</a></span></li>
+           {{#if yetkiler.inviter1}}
+              <li class="profil-ArrangeSizeFit"><span class="profil-StatValue"><a class="btn btn-outline-warning" href="/inviter2">Inviter |</a></span></li>
+           {{/if}}
+            {{#if yetkiler.inviter2}}
+              <li class="profil-ArrangeSizeFit"><span class="profil-StatValue"><a class="btn btn-outline-warning" href="/inviter2">Inviter ||</a></span></li>
+           {{/if}}
+              {{#if yetkiler.inviter3}}
+                <li class="profil-ArrangeSizeFit"><span class="profil-StatValue"><a class="btn btn-outline-warning" href="/inviter3">Inviter |||</a></span></li>
+              {{/if}}
+              {{#if yetkiler.inviteraltyapi}}
+                <li class="profil-ArrangeSizeFit"><span class="profil-StatValue"><a class="btn btn-outline-warning" href="/inviteraltyapi">Inviter Altyapı</a></span></li>
+              {{/if}}
+ 
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

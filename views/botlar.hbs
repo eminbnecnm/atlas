@@ -1,0 +1,36 @@
+<h1 class="text-center text-light font-weight-bolder">Atlas Development</h1>
+  <h3 class="text-center text-light font-weight-bolder">Botlar</h3>
+<hr>
+<div class="container">
+  <input id="search" type="text" class="form-control" placeholder="Bot Ara" aria-label="Kod Ara" aria-describedby="basic-addon2">
+</div><br>
+<div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+
+  {{#each veri}}
+  <div class="col mb-1">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+  <img src="{{this.avatar}}" class="card-img-top" alt="{{this.isim}}" style="border: 5px solid #6C757D;">
+    <div class="card-body">
+    <p class="card-text"><b>Bot Adı:</b> <kbd>{{this.isim}}</kbd></p>
+    <p class="card-text"><b>Kısa Açıklama:</b> <kbd>{{this.kisaaciklama}}</kbd></p>
+    <p class="card-text"><b>Eklenme Tarihi:</b> <kbd>{{this.tarih}}</kbd></p>
+    <hr>
+    <a href="/bot/{{this.id}}" class="btn btn-success"><i class="mdi mdi-chart-line"></i>İncele</a>
+    <a href="/{{this.kod_rank}}/{{this.id}}" class="btn btn-warning"><i class="mdi mdi-chart-line"></i>Bildir</a>
+  </div>
+    </div>
+</div>
+{{/each}}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#search").keyup(function(){
+    var value = $(this).val().toLowerCase();
+    $(".card, .mb-3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>

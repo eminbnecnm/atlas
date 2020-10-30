@@ -1,0 +1,39 @@
+
+<h1 class="text-center text-light font-weight-bolder">Atlas Development</h1>
+  <h3 class="text-center text-light font-weight-bolder">Inviter ||</h3>
+  <h5 class="text-center text-light font-weight-light">Hatası bulunan kodları bildir butonuna basarak bildirebilirsin.</h5>
+<hr>
+<div class="container">
+  <input id="search" type="text" class="form-control" placeholder="Kod Ara" aria-label="Kod Ara" aria-describedby="basic-addon2">
+</div><br>
+<div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+
+  {{#each veri}}
+  <div class="col mb-1">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header"><img src="{{this.resim}}" alt="avatar" style="border-width: 1rem; border: solid;border-radius: 50%; max-width: 100%; height: 2.5rem;"> <b>{{this.paylasankisi}}</b></div>
+  <div class="card-body">
+    <p class="card-text"><b>Kod Adı:</b> <kbd>{{this.isim}}</kbd></p>
+    <p class="card-text"><b>Açıklama:</b> <kbd>{{this.aciklama}}</kbd></p>
+    <p class="card-text"><b>Paylaşılma Tarihi:</b> <kbd>{{this.tarih}}</kbd></p>
+    <p class="card-text"><b>Modüller:</b>{{#each this.modüller}} <kbd>{{this}}</kbd> {{/each}}</p>
+    <hr>
+    <a href="/{{this.kod_rank}}/{{this.id}}" class="btn btn-success"><i class="mdi mdi-chart-line"></i>İncele</a>
+    <a href="/hatabildir" class="btn btn-warning"><i class="mdi mdi-chart-line"></i>Bildir</a>
+  </div>
+    </div>
+</div>
+{{/each}}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#search").keyup(function(){
+    var value = $(this).val().toLowerCase();
+    $(".card, .mb-3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>

@@ -1,0 +1,21 @@
+<body onkeydown="return false">
+  <h1 class="text-center text-light font-weight-bolder">Atlas Development</h1>
+  <h3 class="text-center text-light font-weight-bolder">Botlar</h3>
+  <h2 class="text-center text-light font-weight-bolder">Buradan Eklenmiş Botlar Hakkında İşlem Uygulayabilirsiniz.</h2>
+  <div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+  {{#each botlar}}
+
+  <div class="col mb-1">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem; max-height: 20rem;">
+  <div class="card-header"><img src="{{this.avatar}}" alt="avatar" style="border-width: 1rem; border: solid;border-radius: 50%; max-width: 100%; height: 2.5rem;"> <b>{{this.isim}}</b></div>
+  <div class="card-body">
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Ekleyen Kişi:</b> <kbd>{{this.sahipisim}}</kbd></p>
+  <p class="card-text"style="max-width: 18rem; max-height: 1rem;"><b>Paylaşılma Tarihi:</b> <kbd>{{this.tarih}}</kbd></p><br>
+  <a href="/bot/{{this.id}}" class="btn btn-success"><i class="mdi mdi-chart-line" style="height: 18rem;"></i>İncele</a>
+  <a href="/sil/bot/{{this.id}}" class="btn btn-danger" style="margin: 1rem; ">Sil</a>
+  <a href="/düzenle/bot/{{this.id}}" class="btn btn-warning">Düzenle</a>
+  </div>
+  </div>
+</div>
+{{/each}}
+</div>
